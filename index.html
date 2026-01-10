@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>ALBA – International Premium Web Agency</title>
+<meta name="description" content="ALBA is an international premium African web agency. Professional websites, Mobile Money payments, WhatsApp support.">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.alba.africa">
+
+<style>
+body{margin:0;font-family:system-ui,Arial;background:#0f1f1c;color:#fff}
+a{text-decoration:none;color:#c49a3a}
+section{padding:80px 20px}
+h1,h2,h3{margin-bottom:15px}
+footer{text-align:center;padding:30px;background:#0b3d2e}
+
+header{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:20px;background:#0b3d2e;position:sticky;top:0;z-index:1000
+}
+nav a{margin:0 12px;color:#fff;font-weight:500}
+.lang-switch button{
+ background:#c49a3a;border:none;padding:6px 12px;
+ margin-left:5px;font-weight:bold;cursor:pointer
+}
+
+.hero{text-align:center;background:linear-gradient(135deg,#0b3d2e,#c49a3a)}
+.hero h1{font-size:44px}
+.hero p{max-width:760px;margin:20px auto;font-size:18px}
+
+.btn{
+ display:inline-block;margin:10px;padding:14px 32px;
+ background:#000;color:#fff;font-weight:bold
+}
+
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+ gap:22px;margin-top:35px
+}
+.card{
+ background:#1e3d34;padding:30px;border-radius:8px
+}
+.price{font-size:28px;color:#c49a3a;margin:12px 0}
+
+.pay-btn{
+ width:100%;padding:14px;margin-top:10px;
+ background:#c49a3a;border:none;font-weight:bold;cursor:pointer
+}
+
+.en{display:none}
+
+/* WhatsApp floating */
+.whatsapp{
+ position:fixed;bottom:20px;right:20px;
+ background:#25D366;color:#fff;
+ padding:15px 22px;border-radius:40px;
+ font-weight:bold;z-index:2000
+}
+
+@media(max-width:768px){
+ header{flex-direction:column}
+ .hero h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <strong style="font-size:28px;color:#c49a3a">ALBA</strong>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact</a>
+ </nav>
+ <div class="lang-switch">
+  <button onclick="setLang('fr')">FR</button>
+  <button onclick="setLang('en')">EN</button>
+ </div>
+</header>
+
+<!-- ================= FR ================= -->
+<div class="fr">
+
+<section id="home" class="hero">
+ <h1>Agence Web Internationale Premium</h1>
+ <p>ALBA conçoit des sites web haut de gamme et des solutions digitales pour entreprises africaines et internationales.</p>
+ <a href="#pricing" class="btn">Voir les offres</a>
+ <a href="#" onclick="whatsapp('fr')" class="btn">WhatsApp</a>
+</section>
+
+<section id="services">
+ <h2>Nos Services</h2>
+ <div class="grid">
+  <div class="card">Sites web professionnels & corporate</div>
+  <div class="card">Plateformes e-commerce internationales</div>
+  <div class="card">Applications web sur mesure</div>
+  <div class="card">SEO international & visibilité Google</div>
+  <div class="card">Maintenance, sécurité & performance</div>
+  <div class="card">Branding & identité visuelle premium</div>
+ </div>
+</section>
+
+<section id="pricing">
+ <h2>Offres & Tarifs</h2>
+ <div class="grid">
+
+  <div class="card">
+   <h3>Essentiel</h3>
+   <p>Site vitrine professionnel (5 pages)</p>
+   <div class="price">300 €</div>
+   <button class="pay-btn" onclick="whatsappPay('Essentiel',300,'fr')">
+    Payer via Mobile Money
+   </button>
+  </div>
+
+  <div class="card">
+   <h3>Business</h3>
+   <p>Site + SEO + support prioritaire</p>
+   <div class="price">700 €</div>
+   <button class="pay-btn" onclick="whatsappPay('Business',700,'fr')">
+    Payer via Mobile Money
+   </button>
+  </div>
+
+  <div class="card">
+   <h3>Elite</h3>
+   <p>Projet international sur mesure</p>
+   <div class="price">Sur devis</div>
+   <a href="#" onclick="whatsappQuote('fr')" class="btn">
+    Demander un devis
+   </a>
+  </div>
+
+ </div>
+</section>
+
+<section id="contact">
+ <h2>Contact</h2>
+ <p>Paiement sécurisé • Support 7j/7 • Facture fournie</p>
+ <a href="#" onclick="whatsapp('fr')" class="btn">
+  Contacter ALBA via WhatsApp
+ </a>
+</section>
+
+</div>
+
+<!-- ================= EN ================= -->
+<div class="en">
+
+<section class="hero">
+ <h1>International Premium Web Agency</h1>
+ <p>ALBA builds high-end websites and digital solutions for African and international companies.</p>
+ <a href="#pricing" class="btn">View pricing</a>
+ <a href="#" onclick="whatsapp('en')" class="btn">WhatsApp</a>
+</section>
+
+<section>
+ <h2>Our Services</h2>
+ <div class="grid">
+  <div class="card">Professional & corporate websites</div>
+  <div class="card">International e-commerce platforms</div>
+  <div class="card">Custom web applications</div>
+  <div class="card">International SEO & Google visibility</div>
+  <div class="card">Maintenance, security & performance</div>
+  <div class="card">Premium branding & visual identity</div>
+ </div>
+</section>
+
+<section>
+ <h2>Pricing</h2>
+ <div class="grid">
+
+  <div class="card">
+   <h3>Essential</h3>
+   <p>Professional website (5 pages)</p>
+   <div class="price">€300</div>
+   <button class="pay-btn" onclick="whatsappPay('Essential',300,'en')">
+    Pay via Mobile Money
+   </button>
+  </div>
+
+  <div class="card">
+   <h3>Business</h3>
+   <p>Website + SEO + priority support</p>
+   <div class="price">€700</div>
+   <button class="pay-btn" onclick="whatsappPay('Business',700,'en')">
+    Pay via Mobile Money
+   </button>
+  </div>
+
+  <div class="card">
+   <h3>Elite</h3>
+   <p>Custom international project</p>
+   <div class="price">Custom quote</div>
+   <a href="#" onclick="whatsappQuote('en')" class="btn">
+    Request a quote
+   </a>
+  </div>
+
+ </div>
+</section>
+
+<section>
+ <h2>Contact</h2>
+ <p>Secure payment • 7-day support • Invoice provided</p>
+ <a href="#" onclick="whatsapp('en')" class="btn">
+  Contact ALBA via WhatsApp
+ </a>
+</section>
+
+</div>
+
+<a href="#" onclick="whatsappAuto()" class="whatsapp">WhatsApp</a>
+
+<footer>
+© 2026 ALBA — International Premium Web Agency
+</footer>
+
+<script>
+const phone = "22377231570";
+
+function setLang(lang){
+ document.querySelector('.fr').style.display = lang==='fr'?'block':'none';
+ document.querySelector('.en').style.display = lang==='en'?'block':'none';
+ document.documentElement.lang = lang;
+}
+
+function whatsapp(lang){
+ let msg = lang==='fr'
+ ? "Bonjour ALBA, je souhaite des informations sur vos services web. Merci de préciser votre pays et votre opérateur Mobile Money."
+ : "Hello ALBA, I would like information about your web services. Please specify your country and your Mobile Money operator.";
+ window.open(`https://wa.me/${phone}?text=`+encodeURIComponent(msg));
+}
+
+function whatsappPay(offer,amount,lang){
+ let msg = lang==='fr'
+ ? `Bonjour ALBA, je souhaite payer l'offre ${offer} (${amount}€) via Mobile Money. Merci de préciser votre pays et votre opérateur Mobile Money.`
+ : `Hello ALBA, I would like to pay for the ${offer} offer (${amount}€) via Mobile Money. Please specify your country and your Mobile Money operator.`;
+ window.open(`https://wa.me/${phone}?text=`+encodeURIComponent(msg));
+}
+
+function whatsappQuote(lang){
+ let msg = lang==='fr'
+ ? "Bonjour ALBA, je souhaite demander un devis personnalisé. Merci de préciser votre pays et votre opérateur Mobile Money."
+ : "Hello ALBA, I would like to request a custom quote. Please specify your country and your Mobile Money operator.";
+ window.open(`https://wa.me/${phone}?text=`+encodeURIComponent(msg));
+}
+
+function whatsappAuto(){
+ whatsapp(document.documentElement.lang);
+}
+</script>
+
+</body>
+</html>
